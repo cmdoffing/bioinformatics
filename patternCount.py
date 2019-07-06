@@ -5,9 +5,9 @@ def getKmer( s, i, k ):
 
 def patternCount( text, pattern ):
     count = 0
-    lenPattern = len(pattern)   # 2   "ACGTTCG"
-    lenDiff = len(text) - lenPattern   # 7 - 2 = 5
-    for i in range(lenDiff + 1):    #  0, 1
+    lenPattern = len(pattern)
+    lenDiff = len(text) - lenPattern
+    for i in range(lenDiff + 1):
         if getKmer(text, i, lenPattern) == pattern:
             count += 1
     return count
